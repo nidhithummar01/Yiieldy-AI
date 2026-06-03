@@ -79,7 +79,7 @@ export default function HomePage({ onNav }) {
             <Leaf size={12} color="#16A34A" />
             <span style={{ fontSize: 12, fontWeight: 600, color: '#15803D', letterSpacing: '0.3px' }}>Precision Agriculture · Poultry AI</span>
           </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5.5vw, 60px)', fontWeight: 800, color: 'var(--text)', lineHeight: 1.12, letterSpacing: '-1px', marginBottom: 22 }}>
+          <h1 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 'clamp(36px, 5.5vw, 60px)', fontWeight: 800, color: 'var(--text)', lineHeight: 1.12, letterSpacing: '-1px', marginBottom: 22 }}>
             Turn Farm Data Into<br />
             <span style={{ color: '#16A34A' }}>Smarter Decisions</span>
           </h1>
@@ -106,7 +106,7 @@ export default function HomePage({ onNav }) {
         <div style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 24 }}>
           {stats.map(s => (
             <div key={s.l} style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: 34, fontWeight: 800, color: '#16A34A', letterSpacing: '-1px', fontFamily: "'Playfair Display', serif" }}>{s.v}</div>
+              <div style={{ fontSize: 34, fontWeight: 800, color: '#16A34A', letterSpacing: '-1px', fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif" }}>{s.v}</div>
               <div style={{ fontSize: 13, color: 'var(--muted)', marginTop: 4 }}>{s.l}</div>
             </div>
           ))}
@@ -118,7 +118,7 @@ export default function HomePage({ onNav }) {
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 10 }}>5 AI-Powered Capabilities</div>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.5px' }}>Everything Your Farm Needs</h2>
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.5px' }}>Everything Your Farm Needs</h2>
           </div>
 
           {/* Tab selector */}
@@ -152,7 +152,7 @@ export default function HomePage({ onNav }) {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginBottom: 32 }}>
                 {sol.metrics.map(m => (
                   <div key={m.l} style={{ background: '#F9FAFB', border: '1px solid var(--border)', borderRadius: 10, padding: '14px 10px', textAlign: 'center' }}>
-                    <div style={{ fontSize: 22, fontWeight: 800, color: '#16A34A', fontFamily: "'Playfair Display', serif" }}>{m.v}</div>
+                    <div style={{ fontSize: 22, fontWeight: 800, color: '#16A34A', fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif" }}>{m.v}</div>
                     <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 3 }}>{m.l}</div>
                   </div>
                 ))}
@@ -203,7 +203,7 @@ export default function HomePage({ onNav }) {
       <section style={{ padding: '72px 28px', background: '#F9FAFB', borderTop: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 44 }}>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(26px, 3.5vw, 38px)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.5px', marginBottom: 12 }}>Combined Farm Impact</h2>
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 'clamp(26px, 3.5vw, 38px)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.5px', marginBottom: 12 }}>Combined Farm Impact</h2>
             <p style={{ fontSize: 15, color: 'var(--muted)' }}>All 5 solutions working together for a complete transformation</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
@@ -223,7 +223,7 @@ export default function HomePage({ onNav }) {
         <div style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'center' }}>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#16A34A', marginBottom: 12 }}>Built for Poultry Farmers</div>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(26px, 3.5vw, 38px)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.5px', lineHeight: 1.2, marginBottom: 18 }}>
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 'clamp(26px, 3.5vw, 38px)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.5px', lineHeight: 1.2, marginBottom: 18 }}>
               From Chick Placement to Market Day
             </h2>
             <p style={{ fontSize: 14.5, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 28 }}>
@@ -246,7 +246,7 @@ export default function HomePage({ onNav }) {
               { label: 'Mortality Alert', value: '> 0.5%/day' },
             ].map(c => (
               <div key={c.label} style={{ background: '#F9FAFB', border: '1px solid var(--border)', borderRadius: 12, padding: '20px 16px' }}>
-                <div style={{ fontSize: 20, fontWeight: 800, color: '#16A34A', fontFamily: "'Playfair Display', serif", marginBottom: 4 }}>{c.value}</div>
+                <div style={{ fontSize: 20, fontWeight: 800, color: '#16A34A', fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", marginBottom: 4 }}>{c.value}</div>
                 <div style={{ fontSize: 12, color: 'var(--muted)' }}>{c.label}</div>
               </div>
             ))}
@@ -260,7 +260,7 @@ export default function HomePage({ onNav }) {
           <div style={{ width: 48, height: 48, borderRadius: 12, background: 'linear-gradient(135deg, #16A34A, #22C55E)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
             <Leaf size={22} color="#fff" fill="#fff" />
           </div>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#fff', letterSpacing: '-0.5px', marginBottom: 16 }}>
+          <h2 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#fff', letterSpacing: '-0.5px', marginBottom: 16 }}>
             Ready to See It on Your Farm?
           </h2>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: 36 }}>

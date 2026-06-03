@@ -66,7 +66,7 @@ export default function ChatbotPage() {
   return (
     <div style={{ padding: '32px 28px' }}>
       <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>Farm AI Assistant</h1>
+        <h1 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>Farm AI Assistant</h1>
         <p style={{ fontSize: 14, color: 'var(--muted)' }}>Instant guidance for any farm question — in plain language</p>
       </div>
 

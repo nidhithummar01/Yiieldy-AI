@@ -13,7 +13,7 @@ export default function FeedPage() {
   return (
     <div style={{ padding: '32px 28px' }}>
       <div style={{ marginBottom: 28 }}>
-        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>Feed Optimization AI</h1>
+        <h1 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>Feed Optimization AI</h1>
         <p style={{ fontSize: 14, color: 'var(--muted)' }}>Predict exact feed quantity and timing to cut waste and improve FCR</p>
       </div>
 
@@ -28,7 +28,7 @@ export default function FeedPage() {
                   <Icon size={14} color="#16A34A" />
                 </div>
               </div>
-              <div style={{ fontSize: 24, fontWeight: 800, color: '#16A34A', fontFamily: "'Playfair Display', serif" }}>{s.v}</div>
+              <div style={{ fontSize: 24, fontWeight: 800, color: '#16A34A', fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif" }}>{s.v}</div>
               <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 3 }}>{s.l}</div>
             </div>
           );

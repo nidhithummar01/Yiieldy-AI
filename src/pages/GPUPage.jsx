@@ -20,7 +20,7 @@ export default function GPUPage() {
   return (
     <div style={{ padding: '32px 28px' }}>
       <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>High-Performance AI Backend</h1>
+        <h1 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>High-Performance AI Backend</h1>
         <p style={{ fontSize: 14, color: 'var(--muted)' }}>GPU-optimized inference so every farm gets fast, accurate predictions at any scale</p>
       </div>
 
@@ -38,7 +38,7 @@ export default function GPUPage() {
               <div style={{ width: 30, height: 30, borderRadius: 8, background: '#F0FDF4', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 10 }}>
                 <Icon size={14} color="#16A34A" />
               </div>
-              <div style={{ fontSize: 24, fontWeight: 800, color: '#16A34A', fontFamily: "'Playfair Display', serif" }}>{s.v}</div>
+              <div style={{ fontSize: 24, fontWeight: 800, color: '#16A34A', fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif" }}>{s.v}</div>
               <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 3 }}>{s.l}</div>
             </div>
           );

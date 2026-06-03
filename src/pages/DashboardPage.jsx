@@ -6,7 +6,7 @@ export default function DashboardPage() {
   return (
     <div style={{ padding: '32px 28px' }}>
       <div style={{ marginBottom: 28 }}>
-        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>Performance Dashboard</h1>
+        <h1 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>Performance Dashboard</h1>
         <p style={{ fontSize: 14, color: 'var(--muted)' }}>Flock health trends, KPIs, and multi-house overview in one view</p>
       </div>
 
@@ -15,7 +15,7 @@ export default function DashboardPage() {
         {kpis.map(k => (
           <div key={k.label} style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 12, padding: '18px 16px' }}>
             <div style={{ fontSize: 11, color: 'var(--muted)', fontWeight: 500, marginBottom: 8 }}>{k.label}</div>
-            <div style={{ fontSize: 28, fontWeight: 800, color: 'var(--text)', fontFamily: "'Playfair Display', serif", marginBottom: 4 }}>{k.value}</div>
+            <div style={{ fontSize: 28, fontWeight: 800, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", marginBottom: 4 }}>{k.value}</div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
               <span style={{ fontSize: 11, color: 'var(--muted)' }}>Target: {k.target}</span>
               <span style={{ fontSize: 11, fontWeight: 600, color: k.up ? '#16A34A' : '#DC2626', background: k.up ? '#F0FDF4' : '#FEF2F2', borderRadius: 4, padding: '1px 6px' }}>{k.trend}</span>

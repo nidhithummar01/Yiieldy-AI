@@ -10,7 +10,7 @@ export default function AnomalyPage() {
   return (
     <div style={{ padding: '32px 28px' }}>
       <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>Anomaly Detection</h1>
+        <h1 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>Anomaly Detection</h1>
         <p style={{ fontSize: 14, color: 'var(--muted)' }}>Early warnings on production or health drops — before they become costly</p>
       </div>
 
@@ -28,7 +28,7 @@ export default function AnomalyPage() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
                 <Icon size={14} color={s.color} />
               </div>
-              <div style={{ fontSize: 26, fontWeight: 800, color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>{s.v}</div>
+              <div style={{ fontSize: 26, fontWeight: 800, color: 'var(--text)', fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif" }}>{s.v}</div>
               <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 3 }}>{s.l}</div>
             </div>
           );
