@@ -78,7 +78,7 @@ export default function GPUPage() {
       <div style={{ marginTop: 20, background: '#0D1117', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: '24px 28px' }}>
         <div style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 10 }}>Architecture Overview</div>
         <p style={{ fontSize: 13.5, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, marginBottom: 0 }}>
-          Yiieldy's AI backend runs on NVIDIA GPU instances with CUDA-optimized inference pipelines. All 5 AI models (feed prediction, FCR forecasting, anomaly detection, weight estimation, chatbot NLP) share a single GPU cluster with model parallelism. Data from IoT sensors, feed dispensers, and weighing scales feeds into a real-time stream processor before hitting the inference layer — delivering farm insights in under 50ms end-to-end.
+          Yiieldy's AI backend runs on NVIDIA GPU instances with CUDA-optimized inference pipelines. The AI models for feed prediction, performance forecasting, anomaly detection, weight estimation, and chatbot guidance process farm records entered in the app and uploaded batch data. This keeps the system practical to launch as a pure AI software platform built around the data farmers already have.
         </p>
       </div>
     </div>

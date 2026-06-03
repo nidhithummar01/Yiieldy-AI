@@ -4,38 +4,38 @@ import { Leaf, BarChart2, Brain, AlertTriangle, Zap, ArrowRight, Check, X, Chevr
 const solutions = [
   {
     id: 'feed', num: '01', icon: Leaf, label: 'Feed Optimization AI',
-    tagline: 'Cut feed waste by predicting the exact quantity and timing for each flock.',
+    tagline: 'Predict the best feed quantity and timing from historical farm data.',
     metrics: [{ v: '18%', l: 'Feed Waste Reduced' }, { v: '3 days', l: 'Ahead Prediction' }, { v: '₹420', l: 'Saved per Batch/Day' }],
-    before: ['Manual feed logs updated once a day', 'Over-feeding common in growth weeks 3–5', 'No visibility into waste per house'],
-    after:  ['AI predicts feed need per house every 6 hours', 'Dynamic adjustment by age, weight, FCR trend', 'Real-time waste tracking and alerts'],
-    pitch:  `"Yiieldy's feed AI found we were overfeeding House B by 8% every week — that's ₹12,000 saved per cycle."`,
+    before: ['Manual guesswork and inconsistent feed usage', 'Over-feeding common in growth weeks 3–5', 'Limited visibility into waste per house'],
+    after:  ['AI recommends feed quantity and timing from farm data', 'Planning improves using age, weight, and FCR trends', 'Simple feed waste trends and alerts'],
+    pitch:  `"Yiieldy's feed AI found we were overfeeding House B by 8% every week. That's ₹12,000 saved per cycle."`,
     pitchBy: 'Poultry Farm Owner, Maharashtra',
   },
   {
     id: 'dashboard', num: '02', icon: BarChart2, label: 'Performance Dashboard',
-    tagline: 'Track flock health trends, FCR, body weight, and mortality in one clear view.',
-    metrics: [{ v: '6 KPIs', l: 'Tracked per Flock' }, { v: 'Live', l: 'Data Sync' }, { v: '4 houses', l: 'Multi-Farm View' }],
-    before: ['Paper records and Excel sheets', 'FCR calculated manually at week end', 'No comparison across batches'],
-    after:  ['Auto-computed FCR, weight gain, mortality', 'Week-over-week trend charts per house', 'Color-coded alerts when metrics slip'],
+    tagline: 'Show AI-generated forecasts, alerts, and trends instead of raw data.',
+    metrics: [{ v: '6 KPIs', l: 'Tracked per Flock' }, { v: 'AI', l: 'Forecasts' }, { v: '4 houses', l: 'Multi-Farm View' }],
+    before: ['Raw records are hard to understand', 'FCR calculated manually at week end', 'No comparison across batches'],
+    after:  ['AI dashboard gives simple trends and alerts', 'Auto-computed FCR, weight gain, mortality', 'Week-over-week forecasts per house'],
     pitch:  `"For the first time I can see all 4 houses on one screen and know which batch is at risk before it's too late."`,
     pitchBy: 'Farm Manager, Andhra Pradesh',
   },
   {
     id: 'chatbot', num: '03', icon: Brain, label: 'Farm AI Assistant',
-    tagline: 'Ask any farm question in plain language — get instant guidance inside the app.',
+    tagline: 'Ask any farm question in plain language and get instant guidance inside the app.',
     metrics: [{ v: '<2s', l: 'Response Time' }, { v: '24/7', l: 'Available' }, { v: 'Hindi/EN', l: 'Language Support' }],
     before: ['Call the vet or wait for field officer', 'Farmers unsure of dosage or timing', 'No structured answer to common issues'],
-    after:  ['Type: "FCR went up this week — what do I do?"', 'AI diagnoses likely cause and recommends steps', 'Links to protocols, dosage guides, checklists'],
-    pitch:  '"I asked about high mortality on Day 21 and it gave me 3 possible causes and what to check — in Hindi."',
+    after:  ['Type: "FCR went up this week, what do I do?"', 'AI diagnoses likely cause and recommends steps', 'Links to protocols, dosage guides, checklists'],
+    pitch:  '"I asked about high mortality on Day 21 and it gave me 3 possible causes and what to check in Hindi."',
     pitchBy: 'Integrator Partner, Telangana',
   },
   {
     id: 'anomaly', num: '04', icon: AlertTriangle, label: 'Anomaly Detection',
-    tagline: 'Catch production drops and health problems days before they become costly.',
+    tagline: 'Identify unusual drops in production, feed efficiency, or health patterns early.',
     metrics: [{ v: '48h', l: 'Early Warning Window' }, { v: '92%', l: 'Detection Accuracy' }, { v: 'Push', l: 'Alert Delivery' }],
-    before: ['Issues noticed only during weekly visits', 'Mortality spike catches farmer off guard', 'No pattern recognition across batches'],
-    after:  ['ML flags FCR spike, water drop, temp variance', 'Push alerts with severity level (low/med/high)', 'Root cause hint in every alert message'],
-    pitch:  '"We got an alert that water intake dropped 23% before any bird showed symptoms. We fixed the drinker line the same day."',
+    before: ['Problems are noticed late', 'Mortality spike catches farmer off guard', 'No pattern recognition across batches'],
+    after:  ['AI flags unusual changes in farm records early', 'Alerts show severity level (low/med/high)', 'Root cause hints in every alert message'],
+    pitch:  '"We got an alert that performance was dropping before it became a major issue. The team knew what to check first."',
     pitchBy: 'Poultry Integrator, Gujarat',
   },
   {
@@ -43,8 +43,8 @@ const solutions = [
     tagline: 'GPU-optimized inference so every farm gets fast predictions even at scale.',
     metrics: [{ v: '10×', l: 'Faster than CPU' }, { v: '50k+', l: 'Birds Supported' }, { v: 'CUDA', l: 'Optimized Stack' }],
     before: ['Batch ML jobs run overnight on CPU servers', 'Predictions delayed by hours', 'Cannot scale to new integrator partners fast'],
-    after:  ['NVIDIA GPU-powered inference in milliseconds', 'Same model runs across 50,000-bird farms in real time', 'Horizontal scaling ready for national rollout'],
-    pitch:  '"The platform handles our entire integrator network — 40 farms, live data, instant predictions. No lag at all."',
+    after:  ['GPU-optimized AI delivers faster predictions', 'Same models scale across large poultry operations', 'Horizontal scaling ready for national rollout'],
+    pitch:  '"The platform handles our entire integrator network with 40 farms, uploaded records, and fast predictions. No lag at all."',
     pitchBy: 'CTO, Poultry Integrator Network',
   },
 ];
@@ -84,7 +84,7 @@ export default function HomePage({ onNav }) {
             <span style={{ color: '#16A34A' }}>Smarter Decisions</span>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--muted)', lineHeight: 1.65, marginBottom: 36, maxWidth: 600, margin: '0 auto 36px' }}>
-            Yiieldy's AI suite predicts feed needs, detects health anomalies early, and gives farmers instant guidance — so every flock performs at its best.
+            Yiieldy's AI suite predicts feed needs, detects health anomalies early, and gives farmers instant guidance so every flock performs at its best.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <button onClick={() => onNav('demo')}
@@ -159,7 +159,7 @@ export default function HomePage({ onNav }) {
               </div>
               <blockquote style={{ background: '#F9FAFB', border: '1px solid var(--border)', borderLeft: '3px solid #16A34A', borderRadius: 8, padding: '14px 16px', marginBottom: 24 }}>
                 <p style={{ fontSize: 13, color: 'var(--text-2)', lineHeight: 1.6, fontStyle: 'italic', marginBottom: 8 }}>{sol.pitch}</p>
-                <span style={{ fontSize: 11, color: 'var(--muted)', fontWeight: 600 }}>— {sol.pitchBy}</span>
+                <span style={{ fontSize: 11, color: 'var(--muted)', fontWeight: 600 }}>{sol.pitchBy}</span>
               </blockquote>
               <button onClick={() => onNav(sol.id)}
                 style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '10px 20px', borderRadius: 8, border: 'none', background: '#16A34A', color: '#fff', fontSize: 13, fontWeight: 600, cursor: 'pointer' }}>
@@ -167,7 +167,7 @@ export default function HomePage({ onNav }) {
               </button>
             </div>
 
-            {/* Right — Before/After */}
+            {/* Right Before/After */}
             <div style={{ padding: '40px 36px', background: '#F9FAFB' }}>
               <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--muted)', letterSpacing: '0.8px', textTransform: 'uppercase', marginBottom: 20 }}>Before vs. After Yiieldy AI</div>
               <div style={{ marginBottom: 24 }}>
@@ -227,7 +227,7 @@ export default function HomePage({ onNav }) {
               From Chick Placement to Market Day
             </h2>
             <p style={{ fontSize: 14.5, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 28 }}>
-              Every AI model in Yiieldy is trained on poultry-specific data — broiler growth curves, FCR benchmarks, mortality baselines, and feed cost patterns for Indian farms. No generic predictions.
+              Every AI model in Yiieldy is trained on poultry-specific data, including broiler growth curves, FCR benchmarks, mortality baselines, and feed cost patterns for Indian farms. No generic predictions.
             </p>
             {['Broiler & layer support', 'FCR benchmarks by breed', 'Multi-house farm management', 'Integrator network ready', 'Hindi & English support'].map(f => (
               <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
@@ -264,7 +264,7 @@ export default function HomePage({ onNav }) {
             Ready to See It on Your Farm?
           </h2>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: 36 }}>
-            Book a 30-minute live demo and we'll show all 5 AI solutions running on real farm data — no setup required.
+            Book a 30-minute live demo and we'll show all 5 AI solutions running on real farm data with no setup required.
           </p>
           <button onClick={() => onNav('demo')}
             onMouseEnter={() => setHov('cta')} onMouseLeave={() => setHov(null)}

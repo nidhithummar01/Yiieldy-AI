@@ -18,10 +18,10 @@ export const flockHealth = [
 ];
 
 export const anomalies = [
-  { id: 1, type: 'high',   flock: 'House B — Batch 12', msg: 'Feed conversion ratio spiked +18% above baseline', time: '2h ago',   resolved: false },
-  { id: 2, type: 'medium', flock: 'House A — Batch 11', msg: 'Water intake dropped 23% — possible drinker blockage', time: '5h ago',  resolved: false },
-  { id: 3, type: 'high',   flock: 'House C — Batch 10', msg: 'Mortality rate exceeded 1% threshold for Day 21',    time: '1d ago',   resolved: true  },
-  { id: 4, type: 'low',    flock: 'House A — Batch 11', msg: 'Temperature variance above normal at 3 AM',           time: '8h ago',   resolved: true  },
+  { id: 1, type: 'high',   flock: 'House B - Batch 12', msg: 'Feed conversion ratio spiked +18% above baseline', time: '2h ago',   resolved: false },
+  { id: 2, type: 'medium', flock: 'House A - Batch 11', msg: 'Performance trend dropped 12% below expected range', time: '5h ago',  resolved: false },
+  { id: 3, type: 'high',   flock: 'House C - Batch 10', msg: 'Mortality rate exceeded 1% threshold for Day 21',    time: '1d ago',   resolved: true  },
+  { id: 4, type: 'low',    flock: 'House A - Batch 11', msg: 'Weight gain trending slightly below expected range',  time: '8h ago',   resolved: true  },
 ];
 
 export const kpis = [
@@ -39,8 +39,8 @@ export const farmBatches = [
 ];
 
 export const recommendations = [
-  { id: 1, icon: '🌾', priority: 'high',   flock: 'House B — Batch 12', action: 'Reduce feed quantity by 8% today', reason: 'FCR trend predicts overfeeding for next 3 days', saving: 'Save ~$420' },
-  { id: 2, icon: '💧', priority: 'medium', flock: 'House A — Batch 11', action: 'Check drinker lines in Zone 3',    reason: 'Water intake 23% below normal for 2 days',        saving: 'Prevent health risk' },
-  { id: 3, icon: '🌡️', priority: 'low',    flock: 'House C — Batch 10', action: 'Lower temperature to 24°C by Day 38', reason: 'Optimal finish weight target in 5 days',       saving: '+0.12kg/bird' },
-  { id: 4, icon: '💊', priority: 'medium', flock: 'House A — Batch 11', action: 'Schedule vitamin supplement Day 34', reason: 'Performance curve trending below target',        saving: 'Protect FCR target' },
+  { id: 1, icon: '🌾', priority: 'high',   flock: 'House B - Batch 12', action: 'Reduce feed quantity by 8% today', reason: 'FCR trend predicts overfeeding for next 3 days', saving: 'Save ~$420' },
+  { id: 2, icon: '📈', priority: 'medium', flock: 'House A - Batch 11', action: 'Review batch performance trend',    reason: 'Weight gain and FCR moved below expected range', saving: 'Catch issue early' },
+  { id: 3, icon: '🌡️', priority: 'low',    flock: 'House C - Batch 10', action: 'Review environment notes for Day 38', reason: 'Optimal finish weight target in 5 days',       saving: '+0.12kg/bird' },
+  { id: 4, icon: '💊', priority: 'medium', flock: 'House A - Batch 11', action: 'Review health support plan for Day 34', reason: 'Performance curve trending below target',        saving: 'Protect FCR target' },
 ];

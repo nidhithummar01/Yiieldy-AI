@@ -5,11 +5,11 @@ import { Leaf } from 'lucide-react';
 const QUICK = ['Reduce feed waste?', 'What is FCR?', 'Book a demo', 'Anomaly alerts?'];
 
 const ANSWERS = {
-  feed:    "**Feed Optimization AI** predicts the exact quantity and timing for each flock:\n\n✓ Reduces feed waste by **18%** on average\n✓ Adjusts every 6 hours by age, weight, FCR trend\n✓ Alerts when overfeeding is detected",
+  feed:    "**Feed Optimization AI** predicts the best quantity and timing for each flock:\n\n✓ Reduces feed waste by **18%** on average\n✓ Uses age, weight, FCR trend, and historical feed records\n✓ Alerts when overfeeding is likely",
   fcr:     "**FCR (Feed Conversion Ratio)** = feed consumed ÷ weight gained.\n\nA good FCR for broilers is **< 1.75**. Yiieldy AI:\n• Tracks FCR daily per house\n• Alerts when FCR trends up\n• Predicts week-end FCR 3 days ahead",
-  demo:    "I'd love to set up a demo! Our team will walk you through all 5 AI solutions live on real farm data.\n\nClick **Request demo →** in the top navbar — takes 30 seconds and we respond within 1 hour.",
-  anomaly: "**Anomaly Detection** flags issues before they become costly:\n\n🔴 High — FCR spike, mortality above threshold\n🟡 Medium — Water intake drop, feed pattern change\n🟢 Low — Temperature variance, minor trend shift\n\nAlerts arrive as push notifications with root cause hints.",
-  default: "I can help with:\n• **Feed AI** — how it cuts waste\n• **FCR** — what it means and how we track it\n• **Anomaly detection** — early warning system\n• **Demo / pricing** — getting started\n\nWhat would you like to know?",
+  demo:    "I'd love to set up a demo! Our team will walk you through all 5 AI software solutions using sample farm records.\n\nClick **Request demo →** in the top navbar. It takes 30 seconds and we respond within 1 hour.",
+  anomaly: "**Anomaly Detection** flags issues before they become costly:\n\n🔴 High: FCR spike or mortality above threshold\n🟡 Medium: feed efficiency or weight trend change\n🟢 Low: minor performance trend shift\n\nAlerts appear with root cause hints based on recorded farm data.",
+  default: "I can help with:\n• **Feed AI**: how it cuts waste\n• **FCR**: what it means and how we track it\n• **Anomaly detection**: early warning system\n• **Demo / pricing**: getting started\n\nWhat would you like to know?",
 };
 
 function getReply(t) {

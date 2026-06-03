@@ -77,7 +77,7 @@ export default function FeedPage() {
               <span style={{ fontSize: 22 }}>{r.icon}</span>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)', marginBottom: 2 }}>{r.action}</div>
-                <div style={{ fontSize: 12, color: 'var(--muted)' }}>{r.flock} — {r.reason}</div>
+                <div style={{ fontSize: 12, color: 'var(--muted)' }}>{r.flock}: {r.reason}</div>
               </div>
               <span style={{ fontSize: 12, fontWeight: 700, color: r.priority === 'high' ? '#DC2626' : r.priority === 'medium' ? '#CA8A04' : '#16A34A', background: r.priority === 'high' ? '#FEF2F2' : r.priority === 'medium' ? '#FFFBEB' : '#F0FDF4', border: `1px solid ${r.priority === 'high' ? '#FECACA' : r.priority === 'medium' ? '#FDE68A' : '#BBF7D0'}`, borderRadius: 6, padding: '3px 10px' }}>{r.priority}</span>
               <span style={{ fontSize: 12, fontWeight: 600, color: '#16A34A' }}>{r.saving}</span>

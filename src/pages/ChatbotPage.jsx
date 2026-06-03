@@ -1,15 +1,15 @@
 import { useState, useRef, useEffect } from 'react';
 import { Bot, Send, RefreshCw, User, Leaf } from 'lucide-react';
 
-const QUICK = ['High FCR this week?', 'Mortality alert setup', 'Reduce feed cost', 'Water intake low', 'Day 21 weight check'];
+const QUICK = ['High FCR this week?', 'Mortality alert setup', 'Reduce feed cost', 'Performance dropped', 'Day 21 weight check'];
 
 const ANSWERS = {
-  fcr:      "**High FCR** usually means one of:\n\n1. **Overfeeding** — check if feed quantity was increased recently\n2. **Health issue** — water intake drops often precede FCR spikes\n3. **Feed quality** — moisture or spoilage in feed bins\n\n👉 Recommended: Run the Feed Optimization scan for today and compare against Day-14 baseline.",
-  mortali:  "**Mortality Alert** setup:\n\n• Threshold: > 0.5% per day triggers a **High** alert\n• > 0.3% triggers a **Medium** alert\n• Alerts sent via push notification + app dashboard\n\nYou can customize thresholds per house in Settings → Alerts.",
-  feed:     "**Reducing Feed Cost:**\n\n✓ Use the 3-day predictive schedule (not fixed daily quantity)\n✓ Check House B — FCR trend suggests 8% overfeeding\n✓ Review wastage at feed lines after each cycle\n\nEstimated saving: **₹380–₹440/day** across 4 houses.",
-  water:    "**Low Water Intake** is a key early warning sign:\n\n• Drop > 20% for 2+ days → check drinker lines for blockage\n• Drop > 30% → possible illness or heat stress\n• Sudden drop overnight → equipment fault likely\n\n👉 House A shows -23% this cycle. Check Zone 3 drinker lines today.",
+  fcr:      "**High FCR** usually means one of:\n\n1. **Overfeeding**: check if feed quantity was increased recently\n2. **Health pattern change**: compare mortality, weight gain, and feed use together\n3. **Feed quality issue**: review recent feed batch notes\n\nRecommended: Run the Feed Optimization scan for today and compare against the Day-14 baseline.",
+  mortali:  "**Mortality Alert** setup:\n\n• Threshold: > 0.5% per day triggers a **High** alert\n• > 0.3% triggers a **Medium** alert\n• Alerts appear inside the app dashboard\n\nYou can customize thresholds per house in Settings > Alerts.",
+  feed:     "**Reducing Feed Cost:**\n\n✓ Use the 3-day predictive schedule instead of a fixed daily quantity\n✓ Check House B: FCR trend suggests 8% overfeeding\n✓ Compare recommended feed quantity with actual recorded usage\n\nEstimated saving: **₹380-₹440/day** across 4 houses.",
+  performance: "**Performance Drop** can be reviewed from recorded farm data:\n\n• Compare this week's FCR, weight gain, and mortality with the previous cycle\n• Check whether feed changes started before the drop\n• Ask the AI dashboard to highlight which metric changed first\n\nHouse A shows a 12% performance dip this cycle. Review the batch trend before changing the plan.",
   weight:   "**Day 21 Weight Check:**\n\nTarget for broilers at Day 21: **750–820g**\n\nYour current batches:\n• House A (Day 32): 2.38 kg ✓\n• House B (Day 21): 1.62 kg ⚠ Slightly below target\n• House D (Day 7): 0.42 kg ✓ On track\n\nHouse B may need protein supplement review.",
-  default:  "I can help with:\n• **FCR analysis** — why it went up and what to do\n• **Mortality alerts** — setup and thresholds\n• **Feed cost** — optimization steps\n• **Water intake** — diagnosing low intake\n• **Weight targets** — by age and breed\n\nWhat's your question?",
+  default:  "I can help with:\n• **FCR analysis**: why it went up and what to do\n• **Mortality alerts**: setup and thresholds\n• **Feed cost**: optimization steps\n• **Performance trends**: spotting unusual changes early\n• **Weight targets**: by age and breed\n\nWhat's your question?",
 };
 
 function getReply(t) {
@@ -17,7 +17,7 @@ function getReply(t) {
   if (l.includes('fcr') || l.includes('conversion') || l.includes('high fcr')) return ANSWERS.fcr;
   if (l.includes('mortal') || l.includes('death') || l.includes('alert')) return ANSWERS.mortali;
   if (l.includes('feed') || l.includes('cost') || l.includes('reduc')) return ANSWERS.feed;
-  if (l.includes('water') || l.includes('drink') || l.includes('intake')) return ANSWERS.water;
+  if (l.includes('performance') || l.includes('drop') || l.includes('trend')) return ANSWERS.performance;
   if (l.includes('weight') || l.includes('day 21') || l.includes('21')) return ANSWERS.weight;
   return ANSWERS.default;
 }
@@ -38,7 +38,7 @@ function now() { return new Date().toLocaleTimeString([], { hour: '2-digit', min
 
 export default function ChatbotPage() {
   const [msgs, setMsgs] = useState([
-    { id: 1, from: 'bot', text: "Hi! 👋 I'm your **Farm AI Assistant**.\n\nAsk me anything about your flock — FCR, feed, mortality, water intake, or weight targets.", time: now() }
+    { id: 1, from: 'bot', text: "Hi! I'm your **Farm AI Assistant**.\n\nAsk me anything about your flock: FCR, feed, mortality, performance trends, or weight targets.", time: now() }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -67,7 +67,7 @@ export default function ChatbotPage() {
     <div style={{ padding: '32px 28px' }}>
       <div style={{ marginBottom: 24 }}>
         <h1 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>Farm AI Assistant</h1>
-        <p style={{ fontSize: 14, color: 'var(--muted)' }}>Instant guidance for any farm question — in plain language</p>
+        <p style={{ fontSize: 14, color: 'var(--muted)' }}>Instant guidance for any farm question in plain language</p>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 24 }}>
@@ -75,7 +75,7 @@ export default function ChatbotPage() {
         <div>
           <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 12, padding: '20px', marginBottom: 16 }}>
             <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--text)', marginBottom: 14 }}>What This Solves</div>
-            {['Ask in plain language — no forms', 'Get FCR analysis and action steps', 'Diagnose water, weight, mortality issues', 'Hindi and English supported', '< 2 second response time'].map(f => (
+            {['Ask in plain language without forms', 'Get FCR analysis and action steps', 'Understand feed, weight, mortality, and performance trends', 'Hindi and English supported', '< 2 second response time'].map(f => (
               <div key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, marginBottom: 10 }}>
                 <div style={{ width: 16, height: 16, borderRadius: '50%', background: '#F0FDF4', border: '1px solid #BBF7D0', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
                   <span style={{ fontSize: 9, color: '#16A34A' }}>✓</span>
@@ -151,7 +151,7 @@ export default function ChatbotPage() {
           {/* Input */}
           <div style={{ padding: '10px 12px', background: '#fff', borderTop: '1px solid var(--border)', display: 'flex', gap: 8, alignItems: 'center' }}>
             <input value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') send(input); }}
-              placeholder="Ask about FCR, mortality, feed, water intake..."
+              placeholder="Ask about FCR, mortality, feed, performance trends..."
               style={{ flex: 1, border: '1px solid var(--border)', borderRadius: 8, padding: '9px 12px', fontSize: 13, color: 'var(--text)', background: '#F9FAFB', outline: 'none', transition: 'border-color 0.15s' }}
               onFocus={e => e.target.style.borderColor = '#16A34A'}
               onBlur={e => e.target.style.borderColor = 'var(--border)'}

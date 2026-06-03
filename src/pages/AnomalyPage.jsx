@@ -11,7 +11,7 @@ export default function AnomalyPage() {
     <div style={{ padding: '32px 28px' }}>
       <div style={{ marginBottom: 24 }}>
         <h1 style={{ fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif", fontSize: 28, fontWeight: 800, color: 'var(--text)', marginBottom: 6 }}>Anomaly Detection</h1>
-        <p style={{ fontSize: 14, color: 'var(--muted)' }}>Early warnings on production or health drops — before they become costly</p>
+        <p style={{ fontSize: 14, color: 'var(--muted)' }}>Early warnings on production or health drops before they become costly</p>
       </div>
 
       {/* Stats row */}
